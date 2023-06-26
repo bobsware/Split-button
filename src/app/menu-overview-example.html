@@ -1,0 +1,25 @@
+<!-- #docregion mat-menu-trigger-for -->
+<button
+  mat-raised-button
+  color="primary"
+  (click)="alert('add risk profile item');"
+  class="split-button-left"
+>
+  Save
+</button>
+<button
+  mat-raised-button
+  color="primary"
+  class="split-button-right"
+  [matMenuTriggerFor]="menu"
+>
+  <mat-icon aria-hidden="false" aria-label="Example home icon"
+    >expand_more</mat-icon
+  >
+</button>
+
+<mat-menu #menu="matMenu" xPosition="before">
+  <button (click)="alert('add expiring quote');" mat-menu-item>
+    Save and close
+  </button>
+</mat-menu>
